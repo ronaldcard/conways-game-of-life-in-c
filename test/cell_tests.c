@@ -26,10 +26,13 @@ TEST(Cell, live_cell_with_more_than_three_live_neighbors_dies)
     TEST_ASSERT_FALSE(doesCellLive(ALIVE, 7));
 }
 
-TEST(Cell, dead_cell_with_less_than_three_live_neighbors_dies)
+TEST(Cell, dead_cell_with_exactly_three_live_neighbors_lives)
 {   
     TEST_ASSERT_FALSE(doesCellLive(DEAD, 0));
     TEST_ASSERT_FALSE(doesCellLive(DEAD, 2));
+    TEST_ASSERT_TRUE(doesCellLive(DEAD, 3));
+    TEST_ASSERT_FALSE(doesCellLive(DEAD, 4));
+    TEST_ASSERT_FALSE(doesCellLive(DEAD, 7));
 }
 
 TEST_GROUP_RUNNER(Cell)
@@ -38,5 +41,5 @@ TEST_GROUP_RUNNER(Cell)
     RUN_TEST_CASE(Cell, live_cell_with_two_or_three_live_neighbors_lives);
     RUN_TEST_CASE(Cell, live_cell_with_more_than_three_live_neighbors_dies);
 
-    RUN_TEST_CASE(Cell, dead_cell_with_less_than_three_live_neighbors_dies);
+    RUN_TEST_CASE(Cell, dead_cell_with_exactly_three_live_neighbors_lives);
 }

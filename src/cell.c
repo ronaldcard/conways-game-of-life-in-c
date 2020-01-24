@@ -18,5 +18,5 @@ bool doesCellLive(bool currentCellStatus, int numberOfLiveNeighbors)
 {
     return currentCellStatus ? 
             doesLiveCellLive(numberOfLiveNeighbors) : 
-                doesDeadCellLive(numberOfLiveNeighbors);    
+                doesDeadCellLive(numberOfLiveNeighbors);
 }
