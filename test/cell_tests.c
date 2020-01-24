@@ -23,9 +23,17 @@ TEST(Cell, live_cell_with_more_than_three_live_neighbors_dies)
     TEST_ASSERT_FALSE(cellLives(ALIVE, 4));
 }
 
+TEST(Cell, dead_cell_with_less_than_three_live_neighbors_dies)
+{   
+    TEST_ASSERT_FALSE(cellLives(DEAD, 0));
+    TEST_ASSERT_FALSE(cellLives(DEAD, 2));
+}
+
 TEST_GROUP_RUNNER(Cell)
 {
     RUN_TEST_CASE(Cell, live_cell_with_fewer_than_two_live_neighbors_dies);
     RUN_TEST_CASE(Cell, live_cell_with_two_or_three_live_neighbors_lives);
     RUN_TEST_CASE(Cell, live_cell_with_more_than_three_live_neighbors_dies);
+    
+    RUN_TEST_CASE(Cell, dead_cell_with_less_than_three_live_neighbors_dies);
 }
