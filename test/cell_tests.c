@@ -8,8 +8,8 @@ TEST_SETUP(Cell) {}
 TEST_TEAR_DOWN(Cell) {}
 
 TEST(Cell, live_cell_with_fewer_than_two_live_neighbors_dies)
-{
-    TEST_FAIL_MESSAGE("On purpose!");
+{   
+    TEST_ASSERT_FALSE(cellLives(ALIVE, 1));
 }
 
 TEST_GROUP_RUNNER(Cell)
