@@ -3,5 +3,6 @@
 #include <stdbool.h>
 
 bool getCell(int column, int row);
+void setCell(int column, int row, bool state);
 
 #endif

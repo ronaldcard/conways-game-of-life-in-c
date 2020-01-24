@@ -7,5 +7,10 @@ bool grid[COLUMN_SIZE][ROW_SIZE];
 
 bool getCell(int column, int row)
 {
-    return true;
+    return grid[column][row];
+}
+
+void setCell(int column, int row, bool state)
+{
+    grid[column][row] = state;
 }

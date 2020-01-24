@@ -12,7 +12,15 @@ TEST(Grid, get_cell_should_return_dead_cell)
     TEST_ASSERT_FALSE(getCell(0, 0));
 }
 
+TEST(Grid, get_cell_should_return_live_cell)
+{
+    setCell(0, 0, true);
+
+    TEST_ASSERT_TRUE(getCell(0, 0));
+}
+
 TEST_GROUP_RUNNER(Grid)
 {
     RUN_TEST_CASE(Grid, get_cell_should_return_dead_cell);
+    RUN_TEST_CASE(Grid, get_cell_should_return_live_cell);
 }
