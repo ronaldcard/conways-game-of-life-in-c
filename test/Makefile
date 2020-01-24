@@ -6,7 +6,7 @@ CXXFLAGS=-I../src -I../unity -I.
 VPATH=../src
 
 LIBS=-L../unity -lunity
-SUT=life.o cell.o
+SUT=life.o cell.o grid.o
 
 all: $(PROGNAME)
 	./$(PROGNAME)

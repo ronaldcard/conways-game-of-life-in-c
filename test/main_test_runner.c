@@ -4,6 +4,7 @@ static void run_all_tests(void)
 {
     RUN_TEST_GROUP(Life);
     RUN_TEST_GROUP(Cell);
+    RUN_TEST_GROUP(Grid);
 }
 
 int main(int argc, const char *argv[])
