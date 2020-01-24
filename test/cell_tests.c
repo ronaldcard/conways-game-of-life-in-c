@@ -7,6 +7,16 @@ TEST_SETUP(Cell) {}
 
 TEST_TEAR_DOWN(Cell) {}
 
+TEST(Cell, any_cell_with_less_than_zero_neighbors_dies)
+{   
+    TEST_ASSERT_FALSE(doesCellLive(ALIVE, -1));
+}
+
+TEST(Cell, any_cell_with_more_than_eight_neighbors_dies)
+{   
+    TEST_ASSERT_FALSE(doesCellLive(ALIVE, 9));
+}
+
 TEST(Cell, live_cell_with_fewer_than_two_live_neighbors_dies)
 {   
     TEST_ASSERT_FALSE(doesCellLive(ALIVE, 0));
@@ -37,6 +47,9 @@ TEST(Cell, dead_cell_with_exactly_three_live_neighbors_lives)
 
 TEST_GROUP_RUNNER(Cell)
 {
+    RUN_TEST_CASE(Cell, any_cell_with_less_than_zero_neighbors_dies);
+    RUN_TEST_CASE(Cell, any_cell_with_more_than_eight_neighbors_dies);
+
     RUN_TEST_CASE(Cell, live_cell_with_fewer_than_two_live_neighbors_dies);
     RUN_TEST_CASE(Cell, live_cell_with_two_or_three_live_neighbors_lives);
     RUN_TEST_CASE(Cell, live_cell_with_more_than_three_live_neighbors_dies);
