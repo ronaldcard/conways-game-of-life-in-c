@@ -135,3 +135,6 @@ Temporary Items
 ### C
 *.o
 **/*.o
+
+### this projects executables
+test/life-test
