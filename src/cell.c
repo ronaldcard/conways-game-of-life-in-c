@@ -14,7 +14,7 @@ bool doesDeadCellLive(int numberOfLiveNeighbors)
     return numberOfLiveNeighbors == 3;
 }
 
-bool cellLives(bool currentCellStatus, int numberOfLiveNeighbors)
+bool doesCellLive(bool currentCellStatus, int numberOfLiveNeighbors)
 {
     return currentCellStatus ? doesLiveCellLive(numberOfLiveNeighbors) : doesDeadCellLive(numberOfLiveNeighbors);    
 }
