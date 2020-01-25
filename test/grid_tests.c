@@ -36,4 +36,5 @@ TEST_GROUP_RUNNER(Grid)
 {
     RUN_TEST_CASE(Grid, get_cell_should_return_dead_cell);
     RUN_TEST_CASE(Grid, get_cell_should_return_live_cell);
+    RUN_TEST_CASE(Grid, get_neighbor_count_succeeds);
 }
