@@ -5,4 +5,6 @@
 bool getCell(int column, int row);
 void setCell(int column, int row, bool state);
 
+int getLiveNeighborCount(int currentColumn, int currentRow);
+
 #endif
