@@ -25,6 +25,13 @@ TEST(Grid, get_cell_should_return_live_cell)
     TEST_ASSERT_TRUE(getCell(63, 31));
 }
 
+TEST(Grid, get_neighbor_count_succeeds)
+{
+    int count = getLiveNeighborCount(0, 0);
+    
+    TEST_ASSERT_EQUAL_INT(0, count);
+}
+
 TEST_GROUP_RUNNER(Grid)
 {
     RUN_TEST_CASE(Grid, get_cell_should_return_dead_cell);
